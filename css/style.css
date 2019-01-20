@@ -191,7 +191,10 @@ html {
 	border-radius: 20px;
 
 }
-
+.img__figure {
+	display: block;
+	max-width: 100%;
+}
 .post__img {
 	margin: 0;
 	padding: 0;

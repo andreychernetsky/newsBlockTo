@@ -16,9 +16,11 @@
 		flex-direction: column;
 
 	}
-	.img__figure {
-		max-width: 100%;
-	}
+	/*.img__figure {*/
+		/*display: block;*/
+		/*width: 100%;*/
+		/*height: auto;*/
+	/*}*/
 	.wrap-block {
 		width: 100%;
 		display: flex;
