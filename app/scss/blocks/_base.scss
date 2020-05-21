@@ -1,0 +1,32 @@
+body,html {
+  font-size: 15px;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #2b2a2c;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.body {
+  transition: all ease 1s;
+}
+/*.body-active {
+  margin-left: 350px;
+}*/
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

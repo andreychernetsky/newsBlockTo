@@ -1,0 +1,11 @@
+.user {
+  display: flex;
+ align-items: center;
+
+  &__img {
+    border-radius: 50px;
+    width: 57px;
+    height: 57px;
+    display: block;
+  }
+}
