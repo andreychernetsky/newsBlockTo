@@ -1,0 +1,19 @@
+.logo{
+
+  &__img {
+    width: 57px;
+    height: 57px;
+  }
+  &__link {
+    display:flex;
+    align-items: center;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #2b2a2c;
+    font-weight:700;
+    &:hover {
+      color: #777777;
+      transition: 0.8s;
+    }
+  }
+}

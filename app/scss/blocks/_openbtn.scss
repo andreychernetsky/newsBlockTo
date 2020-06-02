@@ -1,0 +1,11 @@
+.openbtn {
+  display: block;
+  color: #000000;
+  position: absolute;
+  z-index: 3;
+  font-size: 35px;
+  border: none;
+  &:hover {
+    outline: none;
+  }
+}

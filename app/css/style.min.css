@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body, html {
   font-size: 15px;
   margin: 0;
@@ -18,24 +19,27 @@ body, html {
 }
 
 .body {
-  -webkit-transition: all ease 1s;
-  -o-transition: all ease 1s;
-  transition: all ease 1s;
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
 }
 
-/*.body-active {
-  margin-left: 350px;
-}*/
 .container {
-  width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 15px 0 15px;
+}
+
+#main {
+  -webkit-transition: margin-left .5s;
+  -o-transition: margin-left .5s;
+  transition: margin-left .5s;
+  padding: 20px;
 }
 
 .header {
-  width: 100%;
+  padding: 1.2rem 0;
   position: relative;
 }
 
@@ -51,179 +55,215 @@ body, html {
           align-items: center;
 }
 
-.user {
+.logo__img {
+  width: 57px;
+  height: 57px;
+}
+
+.logo__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #2b2a2c;
+  font-weight: 700;
 }
 
-.user__img {
-  border-radius: 50px;
-  width: 57px;
-  height: 57px;
-  display: block;
+.logo__link:hover {
+  color: #777777;
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
 }
 
-#menu {
-  width: 350px;
-  margin-left: -330px;
-  background: #f2f2f2;
+.sidebar {
+  height: 100%;
+  /* 100% Full-height */
+  min-height: 100vh;
+  width: 0;
+  /* 0 width - change this with JavaScript */
   position: fixed;
-  left: 0;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
   top: 0;
-  bottom: 0;
-  z-index: 99;
+  left: 0;
+  background-color: #f5f6f7;
+  /* Black*/
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* Disable horizontal scroll */
+  padding-top: 20px;
+  /* Place content 60px from the top */
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidebar */
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  width: 39px;
+  height: 20px;
+  z-index: 3;
   -webkit-transition: all ease 1s;
   -o-transition: all ease 1s;
   transition: all ease 1s;
-  -webkit-box-shadow: 9px 0px 2px -4px rgba(0, 0, 0, 0.3);
-          box-shadow: 9px 0px 2px -4px rgba(0, 0, 0, 0.3);
-  opacity: .4;
+  background: #000;
 }
 
-#menu.nav-active {
-  margin-left: 0;
-}
-
-.body-active {
-  margin-left: 0;
-}
-
-.nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: 100%;
-}
-
-.nav__link {
-  display: block;
-  margin-left: 2rem;
-  position: relative;
-  font-size: 0.98rem;
-  color: var(--textColorMain);
-}
-
-@media (max-width: 790px) {
-  .nav {
-    display: none;
-    -webkit-transition: background-color 0.6s ease;
-    -o-transition: background-color 0.6s ease;
-    transition: background-color 0.6s ease;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    min-width: 320px;
-  }
-  .nav__link {
-    width: 100%;
-    color: var(--textColorMain);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: 1rem;
-    line-height: 2rem;
-  }
-  .nav__link:hover {
-    color: #00a0d2;
-  }
-}
-
-.c-hamburger {
-  display: block;
+.hamburger:before, .hamburger:after {
+  content: '';
+  background-color: #2D333A;
   position: absolute;
-  left: 0;
-  z-index: 900;
-  margin: auto;
-  width: 50px;
-  height: 50px;
-  color: #ffffff;
-  padding: 0;
-  overflow: hidden;
-  cursor: pointer;
-  /*background: linear-gradient(#F3AE0F, #E38916) #E38916;*/
-  background: -webkit-gradient(linear, left top, left bottom, from(#f5ae00), color-stop(36%, #f59500), to(#f5ae00));
-  background: -o-linear-gradient(top, #f5ae00 0%, #f59500 36%, #f5ae00 100%);
-  background: linear-gradient(to bottom, #f5ae00 0%, #f59500 36%, #f5ae00 100%);
-  -webkit-box-shadow: 0 0 0 60px rgba(0, 0, 0, 0.1) inset, 0.1em 0.1em 0.2em #777;
-          box-shadow: 0 0 0 60px rgba(0, 0, 0, 0.1) inset, 0.1em 0.1em 0.2em #777;
-  /*transition-delay: 0.1s;*/
-}
-
-.c-hamburger:hover {
-  background: -webkit-gradient(linear, left bottom, left top, from(#b5dbc8), color-stop(36%, #828c95), to(#28343b));
-  background: -o-linear-gradient(bottom, #b5dbc8 0%, #828c95 36%, #28343b 100%);
-  background: linear-gradient(to top, #b5dbc8 0%, #828c95 36%, #28343b 100%);
-  outline: none;
-  -webkit-transition: background 0s 0.1s;
-  -o-transition: background 0s 0.1s;
-  transition: background 0s 0.1s;
-}
-
-.c-hamburger:focus {
-  outline: none;
-}
-
-.c-hamburger span {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 8px;
-  right: 8px;
-  height: 2px;
-  background: #ffffff;
-}
-
-.c-hamburger span::before, .c-hamburger span::after {
-  position: absolute;
-  display: block;
-  left: 0;
   width: 100%;
   height: 2px;
-  background: #ffffff;
-  content: "";
+  left: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
-.c-hamburger span::before {
-  top: -10px;
-}
-
-.c-hamburger span::after {
-  bottom: -10px;
-}
-
-.c-hamburger-line.is-active span::before {
+.hamburger:before {
   top: 0;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
 }
 
-.c-hamburger-line.is-active span::after {
+.hamburger:after {
   bottom: 0;
+}
+
+.hamburger.active span {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  background-color: #fff;
+}
+
+.hamburger.active:before {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+  top: 9px;
+  background-color: #fff;
 }
 
-.c-hamburger-line.is-active span::before,
-.c-hamburger-line.is-active span::after {
-  -webkit-transition-delay: 0s,0.3s;
-       -o-transition-delay: 0s,0.3s;
-          transition-delay: 0s,0.3s;
+.hamburger.active:after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 9px;
+  background-color: #fff;
+}
+
+.hamburger__line {
+  position: absolute;
+  background-color: #2D333A;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  top: 9px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.closebtn {
+  position: absolute;
+  font-size: 45px;
+  color: #000000;
+  border: none;
+  border-radius: 27%;
+  top: 5px;
+  right: 20px;
+  right: 20px;
+}
+
+.openbtn {
+  display: block;
+  color: #000000;
+  position: absolute;
+  z-index: 3;
+  font-size: 35px;
+  border: none;
+}
+
+.openbtn:hover {
+  outline: none;
+}
+
+.menu {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-animation: menu;
+          animation: menu;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  height: auto;
+  top: 15px;
+  background: #e5e5e5;
+  opacity: 0.3;
+  /* Полупрозрачный фон */
+  -webkit-box-shadow: 9px 0px 2px -4px rgba(0, 0, 0, 0.3);
+          box-shadow: 9px 0px 2px -4px rgba(0, 0, 0, 0.3);
+  right: 100px;
+  width: 50%;
+  max-width: 500px;
+  position: absolute;
+  z-index: 30;
+}
+
+.menu.active {
+  display: block;
+}
+
+.menu__link {
+  color: #151414;
+  font-weight: 700;
+  line-height: 140%;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-bottom: 1.3rem;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.menu__link:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #2b2a2c;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  z-index: 62;
+  -webkit-transition: width .2s linear;
+  -o-transition: width .2s linear;
+  transition: width .2s linear;
+}
+
+.menu__link:hover {
+  width: 100%;
+  color: red;
+}
+
+.menu__link:first-child {
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 668px) {
+  .menu {
+    top: 60px;
+  }
 }

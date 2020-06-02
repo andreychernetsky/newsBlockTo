@@ -1,0 +1,53 @@
+.menu {
+  display:none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: menu;
+  animation-duration:1s;
+  height: auto;
+  top: 15px;
+  background: #e5e5e5;
+  opacity: 0.3; /* Полупрозрачный фон */
+  box-shadow: 9px 0px 2px -4px rgba(0, 0, 0, 0.3);
+  right: 100px;
+  width:50%;
+  max-width: 500px;
+  position: absolute;
+  z-index: 30;
+  //transition: all 1s ease 0s;
+  &.active {
+  display: block;
+  }
+
+  &__link {
+    color: #151414;
+    font-weight: 700;
+    line-height: 140%;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-bottom: 1.3rem;
+    text-transform: uppercase;
+    position: relative;
+    &:after {
+      content:"";
+      width: 0;
+      height: 2px;
+      background: #2b2a2c;
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      z-index: 62;
+      transition: width .2s linear;
+    }
+    &:hover{
+      width: 100%;
+      color: red;
+    }
+    &:first-child {
+      padding-top:10px;
+    }
+
+  }
+
+}

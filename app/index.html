@@ -7,44 +7,53 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
-<body class="body">
-<!--Перенес элемент сайта на галп.
-Не могу решить задачу.
-1) при нажатие на бургер боковое меню должно смещать контент в право как в пример по ссылке.
-2) нужно как-то сделать так, чтобы как в этом варианте при смещение курсора с меню, через две секунды оно должно убраться
-3) если есть свой вариант, то напишите. Главное сохранить условие и не использовать Jquary-->
-
+<body>
 <header class="header">
 	<div class="container">
 		<div class="header__inner">
-			<div class="user">
-				<img class="user__img" src="images/logo/guitar-pick-logo.png" alt="" >
-				<div class="user__name">gitaramania.by</div>
+			<div class="logo">
+				<a href="" class="logo__link">
+					<img class="logo__img" src="images/logo/guitar-pick-logo.png" alt="logo" >
+					<div class="logo__description">gitaramania.by</div>
+				</a>
 			</div>
-			<nav class="nav" id="menu">
-				<div class="scroll">
-					<a href="" class="nav__link">обучение игре на гитаре</a>
-					<a href="" class="nav__link">клуб "Авиатор"</a>
-					<a href="" class="nav__link">Проект для детей</a>
-				</div>
-			</nav>
-			<button class="c-hamburger c-hamburger-line">
-				<span></span>
-			</button>
-		</div>
+			<nav class="menu" id="menu-overlay">
+				<a class="menu__link" href="index.html" >Главная</a>
+				<a class="menu__link" href="pages/about.html" class="menu-link">О себе</a>
+				<a class="menu__link" href="#" >Описание</a>
+				<a class="menu__link" href="#">Отзывы</a>
+				<a class="menu__link" href="#">Контакты</a>
+				</nav>
+			<a id="menu-button" class="hamburger">
+				<span class="button__line"></span>
+			</a>
+			</div>
 	</div>
 </header>
-<section class="intro">
+
+<!--<section class="intro">
 	<div class="container">
 		<div class="intro__inner">
-			<h2 class="intro__subtitle">Заголовок второго уровня</h2>
-			<h1 class="intro__title">Заголовок второго уровня</h1>
-			<div class="intro__text">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem consequatur, culpa deserunt doloremque ea eius eos, eveniet ipsa ipsum officia pariatur, reiciendis repudiandae voluptate voluptatem. Alias deserunt illum quos.
+			<h2 class="intro__subTitle">Обучение игре на гитаре</h2>
+			<div class="intro__content">
+				<div class="intro__description">
+					<h1 class="intro__title">Акустика, Электро, Классика, Бас</h1>
+					<p class="intro__bgTitle"> ГУО "Центр дополнительного образования детей и молодёжи г.Бобруйска"</p>
+					<div class="social">
+						<a href="#" target="_blank"><i class="fa fa-vk social-link"></i></a>
+						<a href="#" target="_blank"><i class="fa fa-youtube social-link"></i></a>
+					</div>
+					<a href="pages/about.html" class="button">Подробнее</a>
+				</div>
+				<div class="intro__image">
+					<img src="img/main/tFlu4TOtvX0.jpg" alt="main">
+				</div>
 			</div>
 		</div>
 	</div>
-</section>
+</section>-->
+
 <script src="js/script.js"></script>
 </body>
+
 </html>

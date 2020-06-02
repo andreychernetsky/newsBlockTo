@@ -1,6 +1,12 @@
+@import "mixins/mixin";
 
 @import "blocks/base";
 @import "blocks/header";
-@import "blocks/user";
-@import "blocks/nav";
-@import "blocks/c-hamburger";
+@import "blocks/logo";
+@import "blocks/sidebar";
+@import "blocks/hamburger";
+@import "blocks/closebtn";
+@import "blocks/openbtn";
+@import "blocks/menu";
+
+@import "media";
