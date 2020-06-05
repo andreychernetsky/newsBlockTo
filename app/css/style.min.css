@@ -31,11 +31,9 @@ body, html {
   padding: 0 15px 0 15px;
 }
 
-#main {
-  -webkit-transition: margin-left .5s;
-  -o-transition: margin-left .5s;
-  transition: margin-left .5s;
-  padding: 20px;
+.content {
+  width: 100%;
+  height: 400px;
 }
 
 .header {
@@ -105,99 +103,7 @@ body, html {
   /* 0.5 second transition effect to slide in the sidebar */
 }
 
-.hamburger {
-  display: block;
-  position: relative;
-  width: 39px;
-  height: 20px;
-  z-index: 3;
-  -webkit-transition: all ease 1s;
-  -o-transition: all ease 1s;
-  transition: all ease 1s;
-  background: #000;
-}
-
-.hamburger:before, .hamburger:after {
-  content: '';
-  background-color: #2D333A;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  left: 0;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.hamburger:before {
-  top: 0;
-}
-
-.hamburger:after {
-  bottom: 0;
-}
-
-.hamburger.active span {
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
-  background-color: #fff;
-}
-
-.hamburger.active:before {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  top: 9px;
-  background-color: #fff;
-}
-
-.hamburger.active:after {
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  bottom: 9px;
-  background-color: #fff;
-}
-
-.hamburger__line {
-  position: absolute;
-  background-color: #2D333A;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  top: 9px;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.closebtn {
-  position: absolute;
-  font-size: 45px;
-  color: #000000;
-  border: none;
-  border-radius: 27%;
-  top: 5px;
-  right: 20px;
-  right: 20px;
-}
-
-.openbtn {
-  display: block;
-  color: #000000;
-  position: absolute;
-  z-index: 3;
-  font-size: 35px;
-  border: none;
-}
-
-.openbtn:hover {
-  outline: none;
-}
-
 .menu {
-  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -211,9 +117,9 @@ body, html {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   height: auto;
-  top: 15px;
+  top: 70px;
   background: #e5e5e5;
-  opacity: 0.3;
+  opacity: 0;
   /* Полупрозрачный фон */
   -webkit-box-shadow: 9px 0px 2px -4px rgba(0, 0, 0, 0.3);
           box-shadow: 9px 0px 2px -4px rgba(0, 0, 0, 0.3);
@@ -222,10 +128,13 @@ body, html {
   max-width: 500px;
   position: absolute;
   z-index: 30;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
 }
 
 .menu.active {
-  display: block;
+  opacity: 1;
 }
 
 .menu__link {
@@ -260,6 +169,99 @@ body, html {
 
 .menu__link:first-child {
   padding-top: 10px;
+}
+
+@media screen and (max-width: 668px) {
+  .menu {
+    top: 60px;
+  }
+}
+
+.menu-btn {
+  display: block;
+  width: 30px;
+  height: 20px;
+  z-index: 3;
+  position: relative;
+  -webkit-transition: all ease 1s;
+  -o-transition: all ease 1s;
+  transition: all ease 1s;
+}
+
+.menu-btn__line, .menu-btn:before, .menu-btn:after {
+  position: absolute;
+  background-color: #2D333A;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.menu-btn__line {
+  top: 9px;
+}
+
+.menu-btn:before, .menu-btn:after {
+  content: '';
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.menu-btn:before {
+  top: 0;
+}
+
+.menu-btn:after {
+  bottom: 0;
+}
+
+.menu-btn.active .menu-btn__line {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+
+.menu-btn.active:before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 9px;
+}
+
+.menu-btn.active:after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 9px;
+}
+
+.topButton {
+  position: fixed;
+  bottom: 40px;
+  right: 9px;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 30px;
+  background: #ff55ff;
+  opacity: 0.3;
+  color: #444;
+  cursor: pointer;
+  border-radius: 2px;
+  display: none;
+}
+
+.topButton:hover {
+  background: #3f51b5;
+  opacity: 1;
+}
+
+.topButton__show {
+  display: block;
 }
 
 @media screen and (max-width: 668px) {

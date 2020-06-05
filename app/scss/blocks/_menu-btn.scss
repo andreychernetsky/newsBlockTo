@@ -1,0 +1,47 @@
+
+.menu-btn {
+  display: block;
+  width: 30px;
+  height: 20px;
+  z-index: 3;
+  position: relative;
+  transition: all ease 1s;
+  &__line,
+  &:before,
+  &:after {
+    position: absolute;
+    background-color: #2D333A;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transition: all 0.3s ease 0s;
+  }
+  &__line {
+    top: 9px;
+  }
+  &:before,
+  &:after {
+    content: '';
+    transition: all 0.3s ease 0s;
+  }
+  &:before {
+    top: 0;
+  }
+  &:after {
+    bottom: 0;
+  }
+
+  &.active &__line {
+    transform:scale(0);
+  }
+  &.active:before {
+    transform: rotate(45deg);
+    top:9px;
+  }
+  &.active:after {
+    transform: rotate(-45deg);
+    bottom:9px;
+  }
+}
+
+

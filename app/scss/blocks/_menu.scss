@@ -1,25 +1,24 @@
 .menu {
-  display:none;
   flex-direction: column;
   align-items: center;
   text-align: center;
   animation: menu;
-  animation-duration:1s;
+  animation-duration: 1s;
   height: auto;
-  top: 15px;
+  top: 70px;
   background: #e5e5e5;
-  opacity: 0.3; /* Полупрозрачный фон */
+  opacity: 0;
+  /* Полупрозрачный фон */
   box-shadow: 9px 0px 2px -4px rgba(0, 0, 0, 0.3);
   right: 100px;
-  width:50%;
+  width: 50%;
   max-width: 500px;
   position: absolute;
   z-index: 30;
-  //transition: all 1s ease 0s;
+  transition: 1s;
   &.active {
-  display: block;
+    opacity: 1;
   }
-
   &__link {
     color: #151414;
     font-weight: 700;
@@ -29,25 +28,39 @@
     margin-bottom: 1.3rem;
     text-transform: uppercase;
     position: relative;
-    &:after {
-      content:"";
-      width: 0;
-      height: 2px;
-      background: #2b2a2c;
-      position: absolute;
-      bottom: 5px;
-      left: 0;
-      z-index: 62;
-      transition: width .2s linear;
-    }
-    &:hover{
-      width: 100%;
-      color: red;
-    }
-    &:first-child {
-      padding-top:10px;
-    }
-
   }
-
+  &__link:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #2b2a2c;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    z-index: 62;
+    -webkit-transition: width .2s linear;
+    -o-transition: width .2s linear;
+    transition: width .2s linear;
+  }
+  &__link:hover {
+    width: 100%;
+    color: red;
+  }
+  &__link:first-child {
+    padding-top: 10px;
+  }
 }
+@media screen and (max-width: 668px) {
+  .menu {
+    top: 60px;
+  }
+}
+
+
+
+
+
+
+
+
+
