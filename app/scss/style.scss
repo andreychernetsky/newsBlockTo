@@ -1,12 +1,18 @@
 @import "mixins/mixin";
+@import "fonts";
+@import "mixins/font-face";
+
 
 @import "blocks/base";
 @import "blocks/header";
 @import "blocks/logo";
+@import "blocks/phone";
 @import "blocks/sidebar";
 @import "blocks/menu";
 @import "blocks/menu-btn";
 @import "blocks/topButton";
+@import "blocks/section";
+@import "blocks/intro";
 
 
 @import "media";
