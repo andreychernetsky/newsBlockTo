@@ -1,0 +1,33 @@
+.btn {
+  margin-bottom: 10px;
+  display: inline-block;
+  vertical-align: top;
+  /*em дает возможность подстраивать внутрений отступ относительно ее оазмера заданного в пикселях*/
+  padding: 1.05em 1.7em;
+  min-width: 170px;
+  border: 1px solid #6a696b;
+  border-radius: 1.8em;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.06rem;
+  line-height: 1.1;
+  color: #2b2a2c;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color .2s linear, color .2s linear, box-shadow .2s linear, border-color .2s linear;
+  box-shadow: 0 -3px  rgba(43, 42, 44, 0.7) inset;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background-color: #2b2a2c;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.24);
+    color: #fff;
+    border-color: #2b2a2c;
+  }
+}
+
+
+

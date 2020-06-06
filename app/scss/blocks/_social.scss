@@ -1,0 +1,27 @@
+.social {
+  width: 100px;
+  display: flex;
+  margin-bottom: 42px;
+  justify-content: flex-start;
+  &__link {
+    display: block;
+    text-decoration: none;
+    transition: transform .2s linear;
+  }
+  &__link:hover {
+    transform: translateY(-5px);
+  }
+  &__icon {
+    width: 40px;
+    height: 40px;
+    fill: #c6cacc;
+    display: block;
+    font-size: 1.1rem;
+    transition: transform .2s linear;
+  }
+}
+
+
+
+
+
