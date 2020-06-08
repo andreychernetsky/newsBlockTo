@@ -1,4 +1,5 @@
 .menu {
+  margin:auto;
   width: 100%;
   height: auto;
   top: 107px;
@@ -6,7 +7,7 @@
   opacity: 0;
   /* Полупрозрачный фон */
   //box-shadow: 9px 0px 2px -4px rgba(0, 0, 0, 0.3);
-  right: 100px;
+  //right: 100px;
   max-width:80%;
   position: absolute;
   z-index: 30;
@@ -23,35 +24,28 @@
     list-style-type: none;
   }
   &__item {
-
+    width: 100%;
+    border-bottom: 1px solid #ffffff;
+    padding: 20px 0;
+    &:hover {
+      width: 100%;
+      color: red;
+      border-bottom: solid #136018;
+    }
   }
+
   &__link {
     color: #151414;
     font-weight: 700;
-    line-height: 140%;
+    line-height: 150%;
     text-decoration: none;
     font-size: 1.1rem;
     margin-bottom: 1.3rem;
     text-transform: uppercase;
     position: relative;
   }
-  &__link:after {
-    content: "";
-    width: 0;
-    height: 2px;
-    background: #2b2a2c;
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    z-index: 62;
-    -webkit-transition: width .2s linear;
-    -o-transition: width .2s linear;
-    transition: width .2s linear;
-  }
-  &__link:hover {
-    width: 100%;
-    color: red;
-  }
+
+
   &__link:first-child {
     padding-top: 10px;
   }

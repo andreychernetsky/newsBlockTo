@@ -231,12 +231,12 @@ body, html {
 }
 
 .menu {
+  margin: auto;
   width: 100%;
   height: auto;
   top: 107px;
   opacity: 0;
   /* Полупрозрачный фон */
-  right: 100px;
   max-width: 80%;
   position: absolute;
   z-index: 30;
@@ -264,34 +264,27 @@ body, html {
   list-style-type: none;
 }
 
+.menu__item {
+  width: 100%;
+  border-bottom: 1px solid #ffffff;
+  padding: 20px 0;
+}
+
+.menu__item:hover {
+  width: 100%;
+  color: red;
+  border-bottom: solid #136018;
+}
+
 .menu__link {
   color: #151414;
   font-weight: 700;
-  line-height: 140%;
+  line-height: 150%;
   text-decoration: none;
   font-size: 1.1rem;
   margin-bottom: 1.3rem;
   text-transform: uppercase;
   position: relative;
-}
-
-.menu__link:after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background: #2b2a2c;
-  position: absolute;
-  bottom: 5px;
-  left: 0;
-  z-index: 62;
-  -webkit-transition: width .2s linear;
-  -o-transition: width .2s linear;
-  transition: width .2s linear;
-}
-
-.menu__link:hover {
-  width: 100%;
-  color: red;
 }
 
 .menu__link:first-child {
@@ -332,7 +325,7 @@ body, html {
   display: block;
   width: 30px;
   height: 20px;
-  z-index: 3;
+  z-index: 300;
   position: relative;
   -webkit-transition: all ease 1s;
   -o-transition: all ease 1s;
@@ -632,5 +625,8 @@ body, html {
 @media screen and (max-width: 668px) {
   .menu {
     top: 60px;
+  }
+  .btn {
+    left: 50%;
   }
 }
