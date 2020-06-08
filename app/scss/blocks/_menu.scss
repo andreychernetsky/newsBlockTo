@@ -26,12 +26,7 @@
   &__item {
     width: 100%;
     border-bottom: 1px solid #ffffff;
-    padding: 20px 0;
-    &:hover {
-      width: 100%;
-      color: red;
-      border-bottom: solid #136018;
-    }
+
   }
 
   &__link {
@@ -43,6 +38,12 @@
     margin-bottom: 1.3rem;
     text-transform: uppercase;
     position: relative;
+    padding: 20px 0;
+    &:hover {
+      width: 100%;
+      color: red;
+      border-bottom: solid #136018;
+    }
   }
 
 
