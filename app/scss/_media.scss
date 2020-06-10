@@ -1,9 +1,40 @@
-@media screen and (max-width: 668px) {
+@media (max-width:768px) {
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__content {
+      width: 100%;
+    }
+    &__img {
+      display: none;
+    }
+    &__photo {
+      display:block;
+      max-width: 100%;
+
+    }
+    &--mobyle {
+      display: block;
+    }
+  }
+}
+
+
+@media (max-width: 668px) {
 .menu {
   top:60px;
 }
   .btn {
     left: 50%;
   }
+  .logo {
+    &__img {
+      width: 57px;
+      height: 57px;
+      display: none;
+    }
+  }
 
 }
+
