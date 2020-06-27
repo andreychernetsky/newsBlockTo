@@ -1,0 +1,80 @@
+.hamburger {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffc107;
+  float: right;
+  margin-right: 5px;
+  margin-top: 5px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, .5);
+  position: relative;
+  transform: rotate(0deg);
+  &:hover {
+    box-shadow: none;
+    transition: all ease .5s;
+
+  }
+  &.open {
+    background-color: #FF637F;
+    transition: all ease .5s;
+  }
+  & span {
+    width: 60%;
+    height: 3px;
+    background-color: #000;
+    display: block;
+    border-radius: 1px;
+    float: left;
+    margin-left: 20%;
+    -webkit-transition: all ease .3s;
+    -o-transition: all ease .3s;
+    transition: all ease .3s;
+  }
+  & span:nth-child(1) {
+    margin-top: 13px;
+  }
+
+  & span:nth-child(2) {
+    margin-top: 3px;
+  }
+
+  & span:nth-child(3) {
+    margin-top: 3px;
+  }
+
+
+}
+.open span:nth-child(1) {
+  background-color: #fff;
+  transform: rotate(45deg);
+  transition-timing-function: ease-in-out;
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  width: 25px;
+  transition: all ease .5s;
+  border-radius: 10px;
+}
+
+.open span:nth-child(2) {
+  background-color: #fff;
+  transition-timing-function: ease-in-out;
+  margin-top: 18px;
+  opacity: 0;
+  transition: all ease .5s;
+}
+
+.open span:nth-child(3) {
+  background-color: #fff;
+  transform: rotate(-45deg);
+  transition-timing-function: ease-in-out;
+  margin-top: 0;
+  position: absolute;
+  top: 18px;
+  right: 8px;
+  width: 25px;
+  transition: all ease .5s;
+  border-radius: 10px;
+}

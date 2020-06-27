@@ -1,0 +1,156 @@
+.left-menu {
+  height: 50px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 900;
+  width: 50px;
+  overflow: hidden;
+  transition: .5s cubic-bezier(.8, .5, .2, 1.4);
+}
+
+.left-menu:hover {
+  height: 100%;
+  background:rgba(0,0,0,0.4);
+}
+
+.left-menu.openMenu {
+  height: 100%;
+  background:rgba(0,0,0,0.3);
+
+
+}
+
+
+.openMenu {
+  width: 250px;
+  overflow: hidden;
+  transition: .5s cubic-bezier(.8, .5, .2, 1.4);
+}
+
+.left-menu__list {
+  margin-top: 70px;
+  list-style: none;
+  padding: 0;
+  color: #ffffff;
+}
+
+.left-menu__item {
+  width: 250px;
+  line-height: 40px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.left-menu__item:hover {
+  background-color:rgba(0,0,0,.4);
+  transition: all ease .5s;
+  cursor: pointer;
+
+}
+
+.left-menu__link,
+.sub-block__link{
+  text-decoration: none;
+  color: #136018;
+  width: 100%;
+  display: block;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 10px 0;
+  border-bottom: none;
+}
+
+.left-menu__link svg {
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-left: 0;
+}
+
+.left-menu__link span {
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+}
+
+.dropdown-list__link span {
+  padding-left: 30px;
+}
+
+.left-menu__list i.fa {
+  font-size: 25px;
+  padding: 10px;
+  width: 50px;
+  text-align: center;
+}
+
+.left-menu__list >.dropdown-list__link {
+  padding: 0;
+  line-height: 30px;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+
+
+.left-menu__list >.dropdown-list__link:hover {
+  background: #4DD0E1;
+  transition: all .4s;
+
+}
+
+.left-menu__link-dropdown {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 5px;
+  display: block;
+  position: relative;
+}
+
+.active + .dropdown-list {
+  width: 100%;
+  height: auto;
+  line-height: 30px;
+  padding: 0;
+  margin-left: 0;
+  background: #4DD0E1;
+
+}
+
+.dropdown-list {
+  height: 0;
+}
+
+.active + .dropdown-list:hover {
+  background: #00bcd6;
+}
+
+.dropdown-list {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.left-menu__link-dropdown:before {
+  font-family: FontAwesome;
+  content: "\f105";
+  transition: all .4s;
+  padding-right: 5px;
+  right: 20px;
+  position: absolute;
+  top: 4px;
+}
+
+.left-menu__link-dropdown.active:before {
+  font-family: FontAwesome;
+  content: '\f107';
+  transition: all .4s;
+  padding-right: 5px;
+
+}
+
+.left-menu:not(.openMenu) li > .dropdown-list {
+  pointer-events: none;
+  height: 0;
+}
+
