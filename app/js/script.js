@@ -132,3 +132,27 @@ for (let anchor of anchors) {
     }
   )
 };
+
+// modal
+{
+  
+   const btn = document.querySelector('btn'),
+    modal = document.querySelector('.modal'),
+    closeBtn = document.querySelector('.modal__close');
+
+
+  btn.addEventListener('click', function(){
+    modal.style.display = 'flex';
+  });
+
+  closeBtn.addEventListener('click',function(){
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', function(e){
+    if(e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+
+}

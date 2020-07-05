@@ -1,0 +1,149 @@
+
+.modal {
+  perspective: 500px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  background: rgba(58, 54, 54, 0.9);
+  overflow-y: auto;
+}
+
+.modal 	.modal__dialog{
+  position: relative;
+  //display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:auto;
+  width: 100%;
+  max-width:1000px;
+  top: 1%;
+  background: #fff;
+  box-shadow: inset 0 0 13px 0 rgba(0,0,0,0.4);
+  /*box-shadow: 0 1px 4px rgba(0, 0, 0, .3), -23px 0 20px -23px rgba(0, 0, 0, .8), 23px 0 20px -23px rgba(0, 0, 0, .8), 0 0 40px rgba(0, 0, 0, .1) inset;*/
+  animation: modal;
+  animation-duration:1s;
+}
+.modal-work {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-work__title {
+  font-size: 1.5rem;
+  color: #135b18;
+  font-weight: 700;
+  text-align: center;
+
+}
+
+.modal-work__image {
+  max-width: 100%;
+}
+.modal-work__text {
+  width: 800px;
+  max-width: 100%;
+}
+.modal-work__text p {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 0 20px;
+}
+.modal-work__info {
+  font-size: 1.2rem;
+  color: #a51416;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 8px;
+
+}
+
+.modal-work__supervisor {
+  display: block;
+  font-weight: 600;
+}
+
+.modal-work__supervisor-name {
+  display: block;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.modal__close {
+  position: absolute;
+  top: 4.5rem;
+  right: 1.9rem;
+  z-index: 1;
+  padding: 0;
+  /*background: #2b2a2c;*/
+  border: 0;
+  cursor: pointer;
+  transition: transform .2s linear;
+}
+
+.modal__close:hover {
+  transform: rotate(90deg);
+  /*transform:translateY(-3px);*/
+}
+
+.modal__photo {
+  width: 40px;
+  height: 40px;
+  fill: #c6cacc;
+  display: block;
+  font-size: 1.1rem;
+  transition: transform .2s linear;
+}
+.more {
+  display: inline-block;
+  vertical-align: top;
+  /*em дает возможность подстраивать внутрений отступ относительно ее оазмера заданного в пикселях*/
+  margin-bottom: 3%;
+  padding: 1.05em 1.7em;
+  min-width: 170px;
+  border: 1px solid #6a696b;
+  border-radius: 1.8em;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.06rem;
+  line-height: 1.1;
+  color: #2b2a2c;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color .2s linear, color .2s linear, box-shadow .2s linear, border-color .2s linear;
+}
+.more:focus {
+  outline: none;
+}
+.more:hover {
+  background-color: #2b2a2c;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.24);
+  color: #fff;
+  border-color: #2b2a2c;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    top: 5%;
+    transform: rotateX(15deg);
+  }
+  to {
+    opacity: 1;
+    top: 15%;
+    transform: rotateX(0deg);
+  }
+}
+
+@media (max-width: 944px){
+  .modal__close {
+
+  }
+}
