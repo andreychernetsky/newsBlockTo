@@ -14,7 +14,7 @@ gulp.task('clean', async function(){
 
 gulp.task('scss', function(){
   return gulp.src('app/scss/**/*.scss')
-    .pipe(sass({outputStyle: 'expanded'})) //expanded compressed
+    .pipe(sass({outputStyle: 'compressed'})) //expanded compressed
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 8 versions']
     }))

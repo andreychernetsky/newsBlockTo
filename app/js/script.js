@@ -19,7 +19,7 @@
 }
 
 */
-{
+(function() {
   const menubtn = document.querySelector('.menu-btn');
   const menuOpen = document.getElementById('menu-overlay');
   menubtn.addEventListener('click', () => {
@@ -28,26 +28,31 @@
     menubtn.classList.toggle('active');
   });
   window.addEventListener('click', function (e) {
-    e.preventDefault();
+    // e.preventDefault();
     if (!menubtn.contains(e.target) && !menuOpen.contains(e.target) || e.target === menuOpen) {
       menuOpen.classList.remove('active');
       menuOpen.style.display = 'none';
       menubtn.classList.remove('active');
     }
   });
-}
+})();
 // scroll
-const anchors = document.querySelectorAll('a[href*="#"]')
-for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault()
-    const blockID = anchor.getAttribute('href').substr(1)
-    document.getElementById(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+{
+  const anchors = document.querySelectorAll('a[href*="#"]')
+  for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault()
+      const blockID = anchor.getAttribute('href').substr(1)
+      document.getElementById(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
     })
-  })
+  }
+
 }
+
+
 //кнопка up
 {
   function trackScroll() {
@@ -129,8 +134,7 @@ for (let anchor of anchors) {
   let slideShow = document.querySelectorAll('.slidershow');
   slideShow.forEach(item => {
       new SlideShow(0, item)
-    }
-  )
+    })
 };
 
 // modal
