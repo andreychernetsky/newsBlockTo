@@ -160,3 +160,48 @@
   });
 
 }
+
+const progressElement = document.getElementById('user-progress');
+
+tween({
+  duration: 5000,
+
+  onStart () {
+    progressElement.value = 0
+  },
+
+  onProgress (percent) {
+    progressElement.value = 100 * percent
+  },
+
+  onEnd () {
+    fetch("https://andreychernetsky.github.io/newsBlockTo/app/index.html")
+      .then(x => x.text())
+      .then(html => {
+        document.write(html)
+      })
+  }
+})
+
+function tween (props = {}) {
+  if (props.onStart) {
+    props.onStart()
+  }
+
+  const startMoment = Date.now()
+  const intervalFlag = setInterval(() => {
+    const delta = Date.now() - startMoment
+    const percent = Math.min(1, delta / props.duration)
+
+    if (props.onProgress) {
+      props.onProgress(percent)
+    }
+
+    if (percent === 1) {
+      clearInterval(intervalFlag)
+      if (props.onEnd) {
+        props.onEnd()
+      }
+    }
+  })
+}
